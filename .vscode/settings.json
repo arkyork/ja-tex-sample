@@ -1,0 +1,51 @@
+{
+  // ------ LaTeX Workshop Tools ------
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-e", "$latex='platex -interaction=nonstopmode -synctex=1 %S %O'",
+        "-e", "$dvipdf='dvipdfmx %O -o %D %S'",
+        "-e", "$bibtex='upbibtex %O %B'",
+        "-pdfdvi",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "platex",
+      "command": "platex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": [
+        "%DOCFILE%.dvi"
+      ]
+    }
+  ],
+
+  // ------ Build Recipes ------
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (pLaTeX)",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "pLaTeX ➜ dvipdfmx",
+      "tools": ["platex", "platex", "dvipdfmx"]
+    }
+  ],
+
+  // ------ Viewer Settings ------
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+
+  // ------ Optional: 出力フォルダを分けたい場合 ------
+  // "latex-workshop.latex.outDir": "%DIR%/out"
+}

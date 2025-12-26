@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{article}
+
+% --------------------
+% パッケージ
+% --------------------
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{here}
+\usepackage{bm}
+\renewcommand{\refname}{参考文献}
+
+% 余白設定
+\geometry{
+  left=25mm,
+  right=25mm,
+  top=5mm,
+  bottom=25mm
+}
+
+% 行間
+\setstretch{1.3}
+
+% --------------------
+% タイトル情報
+% --------------------
+\title{xxxxxxx}
+\author{
+xxxx大学院 xxx専攻\\
+学籍番号：XXXXXXX\\
+氏名：〇〇 〇〇
+}
+\date{}
+
+% --------------------
+\begin{document}
+\maketitle
+
+
+
+% --------------------
+\section{はじめに}
+ここに本文を書きます。\cite{sample}
+% --------------------
+
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+
+\end{document}
