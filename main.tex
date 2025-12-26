@@ -4,12 +4,12 @@
 % パッケージ
 % --------------------
 \usepackage{amsmath,amssymb}
-\usepackage{graphicx}
 \usepackage{url}
 \usepackage{setspace}
 \usepackage{geometry}
 \usepackage{here}
 \usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
 \renewcommand{\refname}{参考文献}
 
 % 余白設定
@@ -38,12 +38,18 @@ xxxx大学院 xxx専攻\\
 \begin{document}
 \maketitle
 
-
-
 % --------------------
 \section{はじめに}
 ここに本文を書きます。\cite{sample}
+以下、サンプル画像の挿入例です。
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.2\textwidth]{fig/sample.png}
+    \caption{サンプル画像}
+    \label{fig:sample}
+\end{figure}
 % --------------------
+
 
 
 \bibliographystyle{plain}
